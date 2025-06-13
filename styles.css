@@ -1,9 +1,106 @@
+html {
+    cursor: pointer;
+    cursor: help;
+    cursor: progress;
+    height: 100%;
+
+    cursor: url("images/hand.png"), auto;
+    background-image: url("images/pattern.png");
+    background-repeat: repeat;
+
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-color: black;
+    color: white;
+    background-color: #020203;
     font-family: poppins;
-    color: rgb(168, 163, 168);
+
+    text-align: center;
+    margin: auto;
+    width: 55%;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+}
+
+h1, h2 {
     font-family: "Lexend Giga", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 2.25em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
+
+}
+
+p, ul {
+    color: rgb(168, 163, 168);
+    font-family: 'Courier New', Courier, monospace;
+    padding-bottom: 0.75em;
+}
+
+ul {
+    text-align: left;
+}
+
+a {
+    color: white;
+}
+
+footer {
+    padding-top: 4em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 16vw);
+    grid-gap: 0.5em;
+    padding-bottom: 0.75em;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.icon img {
+    width: 2.25em;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+}
+
+#social {
+    padding-bottom: 0.5em;
+}
+
+@media (width <= 1000px) {
+    body {
+        width: 80%;
+    }
+}
+
+@media (width <= 800px) {
+    body {
+        width: 90%;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 24vw);
+    }
 }
