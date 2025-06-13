@@ -6,8 +6,7 @@ html {
     width: 100%;
 
     cursor: url("images/hand.png"), auto;
-    background-image: url("images/pattern.png");
-    background-repeat: repeat;
+    background: black url("images/pattern.png");
 
     margin: 0;
     padding: 0;
