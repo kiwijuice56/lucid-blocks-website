@@ -6,7 +6,7 @@ html {
     width: 100%;
 
     cursor: url("images/hand.png"), auto;
-    background: black url("images/pattern.png");
+    background: black url("images/pixel_pattern.png");
 
     margin: 0;
     padding: 0;
@@ -20,17 +20,13 @@ body {
     text-align: center;
     margin: auto;
     width: 55%;
-    padding-top: 4em;
-    padding-bottom: 4em;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    position: relative;
+    padding: 1em;
 }
 
 html, body { overflow-x: hidden;}
 
-body {position: relative;}
-
-h1, h2 {
+h1, h2, h4 {
     font-family: "Lexend Giga", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -40,20 +36,12 @@ h1, h2 {
 h1 {
     font-size: 4em;
     margin-bottom: 0.5em;
-    margin-top: 0;
-}
-
-h2 {
-    font-size: 2.25em;
-    margin-bottom: 0.5em;
     margin-top: 0.5em;
-
 }
 
 p, ul {
     color: rgb(168, 163, 168);
     font-family: 'Courier New', Courier, monospace;
-    padding-bottom: 0.75em;
 }
 
 ul {
@@ -64,8 +52,9 @@ a {
     color: white;
 }
 
-footer {
-    padding-top: 4em;
+section, footer {
+    margin: 1em;
+    padding: 1em;
 }
 
 .gallery {
@@ -73,7 +62,6 @@ footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 16vw);
     grid-gap: 0.5em;
-    padding-bottom: 0.75em;
 }
 
 .gallery img {
@@ -88,10 +76,6 @@ footer {
     padding-right: 0.25em;
 }
 
-#social {
-    padding-bottom: 0.5em;
-}
-
 @media (width <= 1000px) {
     body {
         width: 80%;
@@ -99,7 +83,6 @@ footer {
 }
 
 @media (width <= 800px) {
-
     html {
         background-image: none
     }
@@ -113,7 +96,10 @@ footer {
         font-size: 2em;
     }
 
-    h2 {
-        font-size: 1.5em;
+    section, footer {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
     }
 }
