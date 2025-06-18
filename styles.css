@@ -40,6 +40,7 @@ h1 {
 }
 
 p, ul {
+    line-height: 1.5em;
     color: rgb(168, 163, 168);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -62,6 +63,7 @@ section, footer {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 16vw);
     grid-gap: 0.5em;
+    padding-bottom: 0.5em;
 }
 
 .gallery img {
@@ -75,6 +77,15 @@ section, footer {
     padding-left: 0.25em;
     padding-right: 0.25em;
 }
+
+.video-wrapper {
+    position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;
+}
+
+.video-wrapper iframe {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+}
+
 
 @media (width <= 1000px) {
     body {
