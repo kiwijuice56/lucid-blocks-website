@@ -12,6 +12,12 @@ html {
     padding: 0;
 }
 
+.screenshot {
+    width: 1920;
+    height: 1080;
+    background-color: #000;
+}
+
 body {
     color: white;
     background-color: #020203;
