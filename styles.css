@@ -18,6 +18,16 @@ html {
     background-color: #000;
 }
 
+.icon img {
+    width: 50;
+    height: 50;
+}
+
+.embedded-image {
+    display:block;
+    margin:auto;
+}
+
 body {
     color: white;
     background-color: #020203;
@@ -99,12 +109,12 @@ section, footer {
 
 .video-wrapper {
     position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;
+    margin-bottom: 0.5em;
 }
 
 .video-wrapper iframe {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
 }
-
 
 @media (width <= 1000px) {
     body {
