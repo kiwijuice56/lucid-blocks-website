@@ -10,6 +10,38 @@ html {
 
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
+}
+
+#websiteNavigation {
+	position: fixed;
+    right: 86px;
+
+    padding: 0;
+    margin: 0;
+
+	text-align: left;
+	background-color: #000000;
+	z-index: 1;
+}
+
+#websiteNavigation ul {
+    padding: 0;
+    margin: 0;
+}
+
+#websiteNavigation li {
+	display: inline;
+
+    padding: 0;
+    margin: 0;
+}
+
+#websiteNavigation li a {
+	text-align: left;
+	display: block;
+	text-decoration: none;
+    padding: 0.5em;
 }
 
 .screenshot {
@@ -55,8 +87,8 @@ h2, h3, h4 {
 
 h1 {
     font-size: 4em;
-    margin-bottom: 0.5em;
-    margin-top: 0.5em;
+    margin-bottom: 0.1em;
+    margin-top: 0.75em;
 }
 
 h3 {
@@ -82,16 +114,27 @@ a {
     color: white;
 }
 
-section, footer {
+section, main, footer {
     margin: 1em;
     padding: 1em;
+}
+
+#intro {
+    margin-top: 0.1em;
+    padding-top: 0.1em;
+    margin-bottom: 0.1em;
+    padding-bottom: 0.1em;
+}
+
+#social {
+    margin-bottom: 2.0em;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 16vw);
-    grid-gap: 0.5em;
+    grid-gap: 0.25em;
     padding-bottom: 0.5em;
 }
 
@@ -108,8 +151,7 @@ section, footer {
 }
 
 .video-wrapper {
-    position: relative; padding-bottom: 56.25%; /* 16:9 */  padding-top: 25px;
-    margin-bottom: 0.5em;
+    position: relative; padding-bottom: 56.25%; /* 16:9 */
 }
 
 .video-wrapper iframe {
@@ -120,6 +162,10 @@ section, footer {
     body {
         width: 80%;
     }
+
+    #websiteNavigation  {
+		display: none;
+	}
 }
 
 @media (width <= 800px) {
