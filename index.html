@@ -10,23 +10,39 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+
+		<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "VideoGame",
+		"name": "Lucid Blocks",
+		"url": "https://lucidblocks.com",
+		"image": "https://lucidblocks.com/images/lsd_dream_emulator_spider.webp",
+		"description": "Lucid Blocks is a psychedelic voxel sandbox game about exploring liminal dreamlike spaces.",
+		"author": {
+			"@type": "Person",
+			"name": "Eric Alfaro",
+			"url": "https://ericalfaro.dev"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Eric Alfaro"
+		},
+		"sameAs": [
+			"https://store.steampowered.com/app/3495730/Lucid_Blocks/",
+			"https://discord.com/invite/9GUb92eJ2v",
+			"https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"
+		]
+		}
+		</script>
 	</head>
 	<body>
-		<a id="top"></a>
-
-		<nav id="websiteNavigation">
-			<ul>
-				<li><a href="#top">> top</a></li>
-				<li><a href="#gallery">> gallery</a></li>
-				<li><a href="#faq">> faq</a></li>
-				<li><a href="#misc">> other stuff</a></li>
-			</ul>
-		</nav>
-
-		<h1>lucid blocks</h1>
+		<div class="banner">
+			<h1>lucid blocks</h1>
+		</div>
 
 		<section id="intro">
-			<p>a voxel game about exploring liminal spaces. </p>
+			<p>a surreal sandbox game about exploring liminal spaces. </p>
 		</section>
 
 		<nav id="social">
@@ -37,33 +53,8 @@
 			<a target="_blank" class="icon" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img alt="Clickable link to the Lucid Blocks YouTube channel" src="images/icons/youtube.svg"/></a>
 		</nav>
 
-		<div id="gallery" class="gallery">
-			<img class="screenshot" src="images/lsd_dream_emulator_spider.webp" alt="A giant prismatic spider enemys"/>
-			<img class="screenshot" src="images/spirit_warehouse.webp" alt="Geometric spirits in a warehouse"/>
-			<img class="screenshot" src="images/water_lights.webp" alt="Dynamic lighting and translucent water"/>
-			<img class="screenshot" src="images/forest.webp" alt="Liminal and mysterious forest" />
-			<img class="screenshot" src="images/scary.webp" alt="A psychedelic person standing under a fractal angel"/>
-			<img class="screenshot" src="images/alma.webp" alt="A cute creature made of paper"/>
-			<div class="video-wrapper">
-				<iframe src="https://www.youtube-nocookie.com/embed/BJgTibC1lwA?si=VSPY_nKhLir8tF0e&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			<div class="video-wrapper">
-				<iframe src="https://www.youtube-nocookie.com/embed/6baYhl_4cC0?si=041ZqyyTOk7eohmd&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			<div class="video-wrapper">
-				<iframe src="https://www.youtube-nocookie.com/embed/ZHxWhl2Azuw?si=8zv9C8JIl6skGFS-&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-			<div class="video-wrapper">
-				<iframe src="https://www.youtube-nocookie.com/embed/9bM1HxAvjCI?si=zhBxVAcRpeZNXRhh&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-			</div>
-
-		</div>
-
-
-
 		<main id="faq">
-			<h2> frequently asked questions </h2>
-			<h3> general </h3>
+			<h2> about</h2>
 			<ul>
 				<li>
 					<h4>what is this?</h4>
@@ -85,7 +76,7 @@
 							powerful items like grappling hooks, scuba diving gear, and explosives.
 						</li>
 						<li>
-							cutscenes with many lovely spirits to meet.
+							cutscenes with many lovely creatures to meet.
 						</li>
 						<li>
 							an editor mode that lets you build to your heart's content.
@@ -96,8 +87,9 @@
 				<li>
 					<h4>where can i play?</h4>
 					<p>
-						lucid blocks is coming soon on the Steam store. release is planned for Windows devices, but Linux/Mac may
-						be supported in the future. in the meantime, join the discord server to see development updates and meet the community.
+						lucid blocks is coming soon on the Steam store. release is planned for Windows devices, but Android/Linux/Mac may
+						be supported in the future. in the meantime, <a href="https://docs.google.com/forms/d/e/1FAIpQLSdZpHcNc50K-yK7tfmONFV6WC_Xxd8dsRFvHRwL_qLhiYKQ6g/viewform?usp=sharing&ouid=110465931425033726348">
+							sign up for beta playtesting</a> and join the discord server to meet the community.
 					</p>
 				</li>
 				<li>
@@ -134,25 +126,54 @@
 				<li>
 					<h4>who is this made by?</h4>
 					<p>lucid blocks has one developer, <a href="https://ericalfaro.dev">Eric Alfaro</a>.
-						i am a university student developing this game in my free time ☺</p>
+						i am a 20 year old computer science student developing this game in my free time.
+						i enjoy anything related to programming, graphics, and art! i also like to cook and make music.
+					    my hope is to make games forever, but i also plan to be a researcher in the future.
+					</p>
 				</li>
 				<li>
 					<h4>how was this made?</h4>
 					<p>
 						lucid blocks was created in the Godot game engine using <nobr>C++</nobr> and GDscript.
 						it started as a simple voxel engine to test Godot's capabilities, but evolved
-						into its own project over the past year.
+						into its own project over the past year. many of the sprites are photos of junk from around
+						my house or a dollar store!
 						the art was made using Aseprite and the music was composed in FL Studio.
 					</p>
 				</li>
 				<li>
 					<h4>can we work together?</h4>
 					<p>i greatly appreciate anyone that reaches out, but i will have to decline for the sake of keeping the
-						project within a reasonable scope.
+						project within a reasonable scope. i would still love to hear your ideas in the discord server,
+						many player suggestions have been added to the game already!
 					</p>
 				</li>
 			</ul>
 		</main>
+
+		<section>
+			<h2> gallery</h2>
+			<div id="gallery" class="gallery">
+				<img class="screenshot" src="images/femme_fruits.webp" alt="A group of pear-like girls"/>
+				<img class="screenshot" src="images/spirit_warehouse.webp" alt="Geometric spirits in a warehouse"/>
+				<img class="screenshot" src="images/water_lights.webp" alt="Dynamic lighting and translucent water"/>
+				<img class="screenshot" src="images/cutscene_block.webp" alt="A qualia connection cube" />
+				<img class="screenshot" src="images/scary.webp" alt="A psychedelic person standing under a fractal angel"/>
+				<img class="screenshot" src="images/alma.webp" alt="A cute creature made of paper"/>
+				<div class="video-wrapper">
+					<iframe src="https://www.youtube-nocookie.com/embed/BJgTibC1lwA?si=VSPY_nKhLir8tF0e&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div class="video-wrapper">
+					<iframe src="https://www.youtube-nocookie.com/embed/6baYhl_4cC0?si=041ZqyyTOk7eohmd&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div class="video-wrapper">
+					<iframe src="https://www.youtube-nocookie.com/embed/ZHxWhl2Azuw?si=8zv9C8JIl6skGFS-&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+				<div class="video-wrapper">
+					<iframe src="https://www.youtube-nocookie.com/embed/9bM1HxAvjCI?si=zhBxVAcRpeZNXRhh&rel=0" title="YouTube video player" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+				</div>
+			</div>
+		</section>
 
 		<section id="misc">
 			<h2> other stuff </h2>

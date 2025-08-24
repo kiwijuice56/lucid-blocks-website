@@ -6,11 +6,35 @@ html {
     width: 100%;
 
     cursor: url("images/hand.png"), auto;
-    background: black url("images/pixel_pattern.png");
+    background: black url("images/forest.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+}
+
+.banner {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0, 0.0) 0%,    /* adjust top opacity */
+        rgba(0,0,0, 1.0) 100%   /* fully transparent at bottom */
+      ),
+    url('images/lsd_dream_emulator_spider.webp') no-repeat center center;
+
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-clip: padding-box;
+    max-width: 100%;
+}
+
+.banner h1 {
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
 
 #websiteNavigation {
@@ -69,7 +93,6 @@ body {
     margin: auto;
     width: 55%;
     position: relative;
-    padding: 1em;
 }
 
 html, body { overflow-x: hidden;}
@@ -86,9 +109,10 @@ h2, h3, h4 {
 }
 
 h1 {
+    padding-top: 1.2em;
+    margin-top: 0;
     font-size: 4em;
     margin-bottom: 0.1em;
-    margin-top: 0.75em;
 }
 
 h3 {
@@ -127,21 +151,22 @@ section, main, footer {
 }
 
 #social {
-    margin-bottom: 2.0em;
+    margin-bottom: 1.0em;
 }
 
 .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 16vw);
+    grid-template-rows: auto;
     grid-gap: 0.25em;
     padding-bottom: 0.5em;
 }
 
 .gallery img {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    object-fit: cover;         /* fill the container, cropping if necessary */
+    object-position: bottom;   /* keep the bottom of the image visible */
+    aspect-ratio: 16 / 9;     /* enforce 9:16 ratio for the container */
 }
 
 .icon img {
@@ -187,5 +212,10 @@ section, main, footer {
         margin-right: 0;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    body {
+        margin: 0;
+        width: 100%;
     }
 }
