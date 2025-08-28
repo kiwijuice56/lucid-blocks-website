@@ -85,9 +85,11 @@ html {
 }
 
 .fanart-image {
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
     max-width: 80%;
     height: auto;
+    width: auto;
 }
 
 button {
