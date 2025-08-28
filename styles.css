@@ -80,8 +80,35 @@ html {
 }
 
 .embedded-image {
-    display:block;
-    margin:auto;
+    display: block;
+    margin: auto;
+}
+
+.fanart-image {
+    display: inline-block;
+    max-width: 80%;
+    height: auto;
+}
+
+button {
+    background: #111;
+    color: rgb(168, 163, 168);
+    border: 2px solid #444;
+    padding: 10px 18px;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #222;
+    border-color: rgb(136, 108, 144);
+    color: rgb(136, 108, 144);
+}
+
+button:active {
+    transform: scale(0.98);
 }
 
 body {
