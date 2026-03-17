@@ -219,7 +219,7 @@
 	<script>
 		const appId = '3495730';
 		const stats = ['blocks_placed', 'blocks_broken', 'death_count'];
-		const url = `https://api.steampowered.com/ISteamUserStats/GetGlobalStatsForGame/v1/?appid=${appId}&count=${stats.length}&${stats.map((s, i) => `name[${i}]=${s}`).join('&')}`;
+		const url = `https://corsproxy.io/?https://api.steampowered.com/ISteamUserStats/GetGlobalStatsForGame/v1/?appid=${appId}&count=${stats.length}&${stats.map((s, i) => `name[${i}]=${s}`).join('&')}`;
 
 		fetch(url)
 			.then(res => res.json())
