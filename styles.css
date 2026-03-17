@@ -6,7 +6,7 @@ html {
     width: 100%;
 
     cursor: url("images/hand.png"), auto;
-    background: black url("images/forest.webp");
+    background: rgb(26, 25, 28) url("images/forest.webp");
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -17,13 +17,18 @@ html {
     scroll-behavior: smooth;
 }
 
+section {
+    padding: 0.5em;
+    margin: 0.5em;
+}
+
 .banner {
     margin: 0;
     padding: 0;
     background: linear-gradient(
         to bottom,
-        rgba(0,0,0, 0.0) 0%,    /* adjust top opacity */
-        rgba(0,0,0, 1.0) 100%   /* fully transparent at bottom */
+        rgba(26, 25, 28, 0.0) 0%,    /* adjust top opacity */
+        rgba(26, 25, 28, 1.0) 100%   /* fully transparent at bottom */
       ),
     url('images/lsd_dream_emulator_spider.webp') no-repeat center center;
 
@@ -38,40 +43,32 @@ html {
 }
 
 #websiteNavigation {
-	position: fixed;
-    right: 3.0em;
-
-    padding: 0;
-    margin: 0;
-
-	text-align: left;
-	background-color: #000000;
-	z-index: 1;
+	display: flex;
+    justify-content: center; 
+    align-items: center;
 }
 
 #websiteNavigation ul {
     padding: 0;
     margin: 0;
+    list-style: none;
+    display: flex;
 }
 
 #websiteNavigation li {
-	display: inline;
-
     padding: 0;
     margin: 0;
 }
 
 #websiteNavigation li a {
-	text-align: left;
-	display: block;
-	text-decoration: none;
-    padding: 0.5em;
+    display: block;
+    padding: 0.75em;
 }
 
 .screenshot {
     width: 1920;
     height: 1080;
-    background-color: #000;
+    background-color: rgb(26, 25, 28);
 }
 
 .icon img {
@@ -90,6 +87,7 @@ html {
     max-width: 80%;
     height: auto;
     width: auto;
+    border-radius: 0.15em;
 }
 
 button {
@@ -115,8 +113,7 @@ button:active {
 
 body {
     color: white;
-    background-color: #020203;
-    font-family: poppins;
+    background-color: rgb(26, 25, 28);
 
     text-align: center;
     margin: auto;
@@ -126,14 +123,18 @@ body {
 
 html, body { overflow-x: hidden;}
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, nav > ul > li > a {
     font-family: "Lexend Giga", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 500;
 }
 
-h2, h3, h4 {
+h2 {
+    font-size: 1.5em;
+}
+
+h3, h4 {
     font-size: 1em;
 }
 
@@ -149,13 +150,9 @@ h3 {
     margin-top: 2.0em;
 }
 
-h4 {
-    color: #aaa;
-}
-
 p, ul {
     line-height: 1.5em;
-    color: rgb(168, 163, 168);
+    color: rgb(210, 201, 210);
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -164,12 +161,12 @@ ul {
 }
 
 a {
-    color: white;
+    color: rgb(161, 255, 232);
 }
 
-section, main, footer {
-    margin: 1em;
-    padding: 1em;
+main, footer {
+    margin: 0.5em;
+    padding: 0.5em;
 }
 
 #intro {
@@ -179,9 +176,6 @@ section, main, footer {
     padding-bottom: 0.1em;
 }
 
-#social {
-    margin-bottom: 1.0em;
-}
 
 .gallery {
     display: grid;
@@ -191,11 +185,17 @@ section, main, footer {
     padding-bottom: 0.5em;
 }
 
+.articleimg {
+    width: 100%;
+    object-fit: cover; 
+}
+
 .gallery img {
     width: 100%;
     object-fit: cover;         /* fill the container, cropping if necessary */
     object-position: bottom;   /* keep the bottom of the image visible */
     aspect-ratio: 16 / 9;     /* enforce 9:16 ratio for the container */
+    border-radius: 0.15em;
 }
 
 .icon img {
@@ -216,10 +216,6 @@ section, main, footer {
     body {
         width: 80%;
     }
-
-    #websiteNavigation  {
-		display: none;
-	}
 }
 
 @media (width <= 800px) {

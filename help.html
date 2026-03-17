@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>lucid blocks help</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Lucid Blocks: A psychedelic voxel game about exploring liminal spaces.">
+		<link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+
+		<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "VideoGame",
+		"name": "Lucid Blocks",
+		"url": "https://lucidblocks.com",
+		"image": "https://lucidblocks.com/images/lsd_dream_emulator_spider.webp",
+		"description": "Lucid Blocks is a psychedelic voxel sandbox game about exploring liminal dreamlike spaces.",
+		"author": {
+			"@type": "Person",
+			"name": "Eric Alfaro",
+			"url": "https://ericalfaro.dev"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "Eric Alfaro"
+		},
+		"sameAs": [
+			"https://store.steampowered.com/app/3495730/Lucid_Blocks/",
+			"https://discord.gg/lucidblocks",
+			"https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"
+		]
+		}
+		</script>
+	</head>
+	<body>
+		<div class="banner">
+			<h1>lucid blocks</h1>
+		</div>
+
+		<section id="intro">
+			<p>a surreal sandbox game about exploring liminal spaces. </p>
+		</section>
+
+		<nav id="social">
+			<a target="_blank" class="icon" href="https://store.steampowered.com/app/3495730/Lucid_Blocks/"><img alt="Clickable link to the Lucid Blocks Steam page" src="images/icons/steam.svg"/></a>
+			<a target="_blank" class="icon" href="https://discord.gg/lucidblocks">                   <img alt="Clickable link to the Lucid Blocks Discord server" src="images/icons/discord.svg"/></a>
+			<a target="_blank" class="icon" href="https://www.instagram.com/lucy.b.locks/">                <img alt="Clickable link to the Lucid Blocks Instagram" src="images/icons/instagram.svg"/></a>
+			<a target="_blank" class="icon" href="https://bsky.app/profile/ericalfaro.dev">                 <img alt="Clickable link to the Lucid Blocks Bluesky" src="images/icons/bluesky.svg"/></a>
+			<a target="_blank" class="icon" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img alt="Clickable link to the Lucid Blocks YouTube channel" src="images/icons/youtube.svg"/></a>
+			<a target="_blank" class="icon" href="https://www.reddit.com/r/LucidBlocks/"><img alt="Clickable link to the Lucid Blocks subreddit" src="images/icons/reddit.svg"/></a>
+		</nav>
+
+		<nav id="websiteNavigation">
+			<ul>
+				<li><a href="index.html">home</a></li>
+				<li><a href="help.html">help</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<section>
+				<p>jump to <a href="#crash">crash troubleshooting</a> or <a href="#recovery">save file recovery</a>. if you have any bug reports, please join the discord server and make a thread.</p>
+			</section>
+			<section class="contentSection" id="crash">
+				<h2>my game crashes or won't boot!</h2>
+				<ul>
+					<li>
+						<h4>GPU-related fixes</h4>
+						<ul>
+							<li>upgrade your graphics driver version. please do not use the built-in Windows driver tool. instead, look up the dedicated driver installer for your GPU (for example: <a href="https://www.intel.com/content/www/us/en/support/detect.html">Intel</a>, <a href="https://www.amd.com/en/support/download/drivers.html">AMD</a>, <a href="https://www.nvidia.com/en-us/drivers/">NVIDIA</a>) and use that tool instead. </li>
+							<li>switch to integrated graphics if your device supports it.</li>
+						</ul>
+					</li>
+					<li>
+						<h4>other common fixes</h4>
+						<ul>
+							<li>verify Steam files.</li>
+							<li>disable your anti-virus.</li>
+							<li>run the game from the .exe in the file system rather than from the Steam client.</li>
+							<li>turn off Smart App Control on your device.</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="contentSection" id="recovery">
+				<h2>my qualia was corrupted!</h2>
+
+				<ul>
+					<li>
+						<h4>locating backups</h4>
+						<p>don't panic, the game stores back-ups of the previous ten saves within the <code>%APPDATA%/lucid blocks/backups/</code> folder. each subfolder corresponds to a snapshot of your qualia before you saved it. to find the matching backup, look through the <code>backup_info.txt</code> files inside each subfolder to check the name of the qualia (it'll look a little garbled, but you can find a piece of text like <code>"s:qualia_name","s:qualia name here"</code> as shown in the image below). </p>
+						<img src="images/qualia_name.png" class="articleimg"/>
+					</li>
+					<li>
+						<h4>recovering</h4>
+						<p>before doing anything, copy all the <code>%APPDATA%/lucid blocks/</code> files to somewhere else on your device in case you mess up the recovery process and need to start over.</p>
+
+						<p>assuming you found the correct backup, open the <code>backup_info.txt</code> file to find the UUID of your save file (it should look like a string of random letters, such as <code>a1a07956-bdd0-41ed-b3de-349e9a9598f</code>).</p>
+
+						<p>next, you will need to copy and paste the <code>data.txt</code> and <code>register.txt</code> files into <code>%APPDATA%/lucid blocks/qualia/{the UUID you found}/</code> (or <code>gift_qualia</code> if you downloaded this qualia from the firmament). if you did this correctly, your save file should now be restored!</p>
+					</li>
+
+				</ul>
+			</section>
+		</main>
+
+		<img loading="lazy" alt="Moving image of an Ofanim" src="images/tiny_fractal.gif"/>
+
+		<footer>
+			<p>© 2026 Lucy B. Locks | icons by <a href="https://icons8.com/">Icons8</a></p>
+		</footer>
+
+		<script src="fanart.js"></script>
+	</body>
+</html>
