@@ -197,6 +197,15 @@
 				<p>(message me if you'd like your art on here)</p>
 			</section>
 
+			<section class="contentSection">
+				<h2> global stats </h2>
+				<ul>
+					<li>blocks placed: <span id="blocks_placed">loading...</span></li>
+					<li>blocks broken: <span id="blocks_broken">loading...</span></li>
+					<li>deaths: <span id="death_count">loading...</span></li>
+				</ul>
+			</section>
+
 		</main>
 
 		<img loading="lazy" alt="Moving image of an Ofanim" src="images/tiny_fractal.gif"/>
@@ -207,4 +216,25 @@
 
 		<script src="fanart.js"></script>
 	</body>
+	<script>
+		const appId = '3495730';
+		const stats = ['blocks_placed', 'blocks_broken', 'death_count'];
+		const url = `https://api.steampowered.com/ISteamUserStats/GetGlobalStatsForGame/v1/?appid=${appId}&count=${stats.length}&${stats.map((s, i) => `name[${i}]=${s}`).join('&')}`;
+
+		fetch(url)
+			.then(res => res.json())
+			.then(data => {
+				const globalstats = data.response.globalstats;
+				stats.forEach(stat => {
+					document.getElementById(stat).textContent = Number(globalstats[stat].total).toLocaleString();
+				});
+			})
+			.catch(() => {
+				stats.forEach(stat => {
+					document.getElementById(stat).textContent = 'unavailable';
+				});
+			});
+	</script>
 </html>
+
+  
