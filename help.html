@@ -63,7 +63,14 @@
 
 		<main>
 			<section>
-				<p>jump to <a href="#crash">crash troubleshooting</a> or <a href="#recovery">save file recovery</a>. if you have any bug reports, please join the discord server and make a thread.</p>
+				<p>note: if you found a bug, please join the <a href="https://discord.gg/lucidblocks">discord server</a> and make a thread in the bug reports forum.</p>
+				<p>jump to a section:</p>
+				<ul>
+					<li><a href="#crash">crash troubleshooting</a></li>
+					<li><a href="#display">display and input troubleshooting</a></li>
+					<li><a href="#recovery">save file recovery</a></li>
+				</ul>
+				
 			</section>
 			<section class="contentSection" id="crash">
 				<h2>my game crashes or won't boot!</h2>
@@ -72,17 +79,36 @@
 						<h4>GPU-related fixes</h4>
 						<ul>
 							<li>upgrade your graphics driver version. please do not use the built-in Windows driver tool. instead, look up the dedicated driver installer for your GPU (for example: <a href="https://www.intel.com/content/www/us/en/support/detect.html">Intel</a>, <a href="https://www.amd.com/en/support/download/drivers.html">AMD</a>, <a href="https://www.nvidia.com/en-us/drivers/">NVIDIA</a>) and use that tool instead. </li>
+							<li>if you've used programs like NVIDIA Control Panel or AMD Software, reset any 3D settings to their defaults.</li>
 							<li>switch to integrated graphics if your device supports it.</li>
+							<li>lower your graphics preset in-game.</li>
 						</ul>
 					</li>
 					<li>
 						<h4>other common fixes</h4>
 						<ul>
-							<li>verify Steam files.</li>
-							<li>disable your anti-virus.</li>
-							<li>run the game from the .exe in the file system rather than from the Steam client.</li>
+							<li>reinstall the game and verify Steam files.</li>
+							<li>disable your antivirus or add lucid blocks as an exception.</li>
+							<li>run the game from <code>C:\Program Files (x86)\Steam\steamapps\common\lucid-blocks\lucid-blocks\lucid-blocks.exe</code> in the file system rather than from the Steam client.</li>
 							<li>turn off Smart App Control on your device.</li>
 						</ul>
+					</li>
+				</ul>
+			</section>
+						<section class="contentSection" id="display">
+				<h2>my display/input won't work!</h2>
+				<ul>
+					<li>
+						<h4>can't click on Steam Deck</h4>
+						<p>switch to Proton 9.0! this is a known Steam bug.</p>
+					</li>
+					<li>
+						<h4>can't fullscreen / taskbar won't go away</h4>
+						<p>press <code>f11</code> to toggle fullscreen.</p>
+					</li>
+					<li>
+						<h4>the window is too big for my screen</h4>
+						<p>press <code>windows key + arrow key</code> to forcefully resize the window. this should make the title bar visible for you to move and resize the window properly.</p>
 					</li>
 				</ul>
 			</section>
@@ -92,16 +118,16 @@
 				<ul>
 					<li>
 						<h4>locating backups</h4>
-						<p>don't panic, the game stores back-ups of the previous ten saves within the <code>%APPDATA%/lucid blocks/backups/</code> folder. each subfolder corresponds to a snapshot of your qualia before you saved it. to find the matching backup, look through the <code>backup_info.txt</code> files inside each subfolder to check the name of the qualia (it'll look a little garbled, but you can find a piece of text like <code>"s:qualia_name","s:qualia name here"</code> as shown in the image below). </p>
+						<p>don't panic, the game stores back-ups of the previous ten saves within the <code>%APPDATA%/lucid blocks/backups/</code> folder. each subfolder corresponds to a snapshot of a qualia before you saved it. to find the matching backup, look through the <code>backup_info.txt</code> files inside each subfolder to check the name of the qualia (it'll look a little garbled, but you can find a piece of text like <code>"s:qualia_name","s:[your qualia name]"</code> as shown in the image below with a qualia titled <code>home,home</code>).</p>
 						<img src="images/qualia_name.png" class="articleimg"/>
 					</li>
 					<li>
-						<h4>recovering</h4>
-						<p>before doing anything, copy all the <code>%APPDATA%/lucid blocks/</code> files to somewhere else on your device in case you mess up the recovery process and need to start over.</p>
+						<h4>recovery</h4>
+						<p>before proceeding, copy all <code>%APPDATA%/lucid blocks/</code> contents to a safe locations on your device in case you mess up the recovery process and need to start over.</p>
 
-						<p>assuming you found the correct backup, open the <code>backup_info.txt</code> file to find the UUID of your save file (it should look like a string of random letters, such as <code>a1a07956-bdd0-41ed-b3de-349e9a9598f</code>).</p>
+						<p>assuming you found the correct backup, open the <code>backup_info.txt</code> file to find the UUID of your save file (it should look like a string of random numbers and letters, such as <code>a1a07956-bdd0-41ed-b3de-349e9a9598f</code>).</p>
 
-						<p>next, you will need to copy and paste the <code>data.txt</code> and <code>register.txt</code> files into <code>%APPDATA%/lucid blocks/qualia/{the UUID you found}/</code> (or <code>gift_qualia</code> if you downloaded this qualia from the firmament). if you did this correctly, your save file should now be restored!</p>
+						<p>next, copy and paste the <code>data.txt</code> and <code>register.txt</code> files into <code>%APPDATA%/lucid blocks/qualia/{the UUID you found}/</code> (or <code>gift_qualia</code> if you downloaded this qualia from the firmament). if you did this correctly, your save file will function properly the next time you start the game.</p>
 					</li>
 
 				</ul>
