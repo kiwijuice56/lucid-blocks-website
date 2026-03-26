@@ -1,7 +1,7 @@
 const fanartList = [
     { src: "images/fanart/cheats_blamesman_discord.webp", credit: "cheats blamesman on discord" },
     { src: "images/fanart/ikouu_discord.webp", credit: "callmeiko on discord" },
-     { src:"images/fanart/ikouu_discord_pixel.png", credit: "callmeiko on discord" },
+    { src:"images/fanart/ikouu_discord_pixel.png", credit: "callmeiko on discord" },
     { src: "images/fanart/d387_discord.png", credit: "d387 on discord" },
     { src: "images/fanart/kvivitulo_discord_bubblebear.webp", credit: "kvivitulo on discord" },
     { src: "images/fanart/hairic_bubblebear.png", credit: "hairic on discord" },
@@ -26,21 +26,63 @@ const fanartList = [
     { src: "images/fanart/nonpartisanuno_discord.jpg", credit: "nonpartisanuno on discord" },
     { src: "images/fanart/tofuuu_6334_discord.jpg", credit: "tofuuu6334 on discord" },
     { src: "images/fanart/tofuuu_6334_discord_2.jpg", credit: "tofuuu6334 on discord" },
+    { src: "images/fanart/_rawage_discord.jpg", credit: "_rawage_ on discord" },
+    { src: "images/fanart/alyschouchou_discord.png", credit: "alyschouchou on discord" },
+    { src: "images/fanart/andro_discord.png", credit: "andro on discord" },
+    { src: "images/fanart/aprilWORSTmonth_discord.png", credit: "aprilWORSTmonth on discord" },
+    { src: "images/fanart/armbordy_discord.png", credit: "armbordy on discord" },
+    { src: "images/fanart/axis_discord.jpg", credit: "axis on discord" },
+    { src: "images/fanart/axol_discord.png", credit: "axol on discord" },
+    { src: "images/fanart/axol_discord_2.png", credit: "axol on discord" },
+    { src: "images/fanart/axol_discord_3.png", credit: "axol on discord" },
+    { src: "images/fanart/burneyarts_discord.png", credit: "burneyarts on discord" },
+    { src: "images/fanart/chainsandsinew_discord.png", credit: "chainsandsinew on discord" },
+    { src: "images/fanart/chayk_discord.png", credit: "chayk on discord" },
+    { src: "images/fanart/cyanbug_discord.jpg", credit: "cyanbug on discord" },
+    { src: "images/fanart/darktraverse_discord.png", credit: "darktraverse on discord" },
+    { src: "images/fanart/darktraverse_discord_2.png", credit: "darktraverse on discord" },
+    { src: "images/fanart/deleave_x.png", credit: "deleave on twitter" },
+    { src: "images/fanart/dell_discord.png", credit: "dell on discord" },
+    { src: "images/fanart/dijon_discord.jpg", credit: "dijon on discord" },
+    { src: "images/fanart/genrihvolf_bsky.webp", credit: "genrihvolf on bluesky" },
+    { src: "images/fanart/gills_discord.png", credit: "gills on discord" },
+    { src: "images/fanart/gills_discord_2.png", credit: "gills on discord" },
+    { src: "images/fanart/jams_discord.png", credit: "jams on discord" },
+    { src: "images/fanart/jams_discord_2.png", credit: "jams on discord" },
+    { src: "images/fanart/juniacolonthree_discord.jpg", credit: "juniacolonthree on discord" },
+    { src: "images/fanart/karina_discord.png", credit: "karina on discord" },
+    { src: "images/fanart/kofi_discord.webp", credit: "kofi on discord" },
+    { src: "images/fanart/koti_discord.png", credit: "koti on discord" },
+    { src: "images/fanart/krazedkorpze_discord.jpg", credit: "krazedkorpze on discord" },
+    { src: "images/fanart/meowlice_discord.png", credit: "meowlice on discord" },
+    { src: "images/fanart/meowlice_discord_2.png", credit: "meowlice on discord" },
+    { src: "images/fanart/merlin_on_vacay_discord.jpg", credit: "merlin_on_vacay on discord" },
+    { src: "images/fanart/ninebaalart_bsky.jpg", credit: "ninebaalart on bluesky" },
+    { src: "images/fanart/ninebaalart_bsky_2.jpg", credit: "ninebaalart on bluesky" },
+    { src: "images/fanart/ninebaalart_bsky_3.jpg", credit: "ninebaalart on bluesky" },
+    { src: "images/fanart/ninebaalart_bsky_4.jpg", credit: "ninebaalart on bluesky" },
+    { src: "images/fanart/ninebaalart_bsky_5.jpg", credit: "ninebaalart on bluesky" },
+    { src: "images/fanart/pixel_cg_discord.jpg", credit: "pixel_cg on discord" },
+    { src: "images/fanart/pixel_cg_discord_2.jpg", credit: "pixel_cg on discord" },
+    { src: "images/fanart/pollignom21_discord.png", credit: "pollignom21 on discord" },
+    { src: "images/fanart/spungus_discord.jpg", credit: "spungus on discord" },
+    { src: "images/fanart/tetro_discord.png", credit: "tetro on discord" },
+    { src: "images/fanart/VanishingRat_discord.png", credit: "VanishingRat on discord" },
+    { src: "images/fanart/volya_discord.png", credit: "volya on discord" },
+    { src: "images/fanart/Zahirgamer444_discord.png", credit: "ZahirGamer444 on discord" },
+    { src: "images/fanart/ZahirGamer444_discord_2.jpg", credit: "ZahirGamer444 on discord" },
 ];
 
 function nextFanart() {
     index = (index + 1) % fanartList.length;
     updateImage();
 }
-
 function updateImage() {
     const selectedFanart = fanartList[index];
     const fanartImg = document.getElementById("fanart-img");
     const fanartCredit = document.getElementById("fanart-credit");
-
     fanartImg.src = selectedFanart.src;
     fanartCredit.textContent = "by: " + selectedFanart.credit;
 }
-
 let index = Math.floor(Math.random() * fanartList.length);
 updateImage();

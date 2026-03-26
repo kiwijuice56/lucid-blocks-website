@@ -11,10 +11,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
 		<link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
 
-		<script type="application/ld+json">
+	<script type="application/ld+json">
+	{
+	"@context": "https://schema.org",
+	"@graph": [
 		{
-		"@context": "https://schema.org",
 		"@type": "VideoGame",
+		"@id": "https://lucidblocks.com/#game",
 		"name": "Lucid Blocks",
 		"url": "https://lucidblocks.com",
 		"image": "https://lucidblocks.com/images/lsd_dream_emulator_spider.webp",
@@ -31,10 +34,50 @@
 		"sameAs": [
 			"https://store.steampowered.com/app/3495730/Lucid_Blocks/",
 			"https://discord.gg/lucidblocks",
-			"https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"
+			"www.youtube.com/@lucy_b_locks"
+		]
+		},
+		{
+		"@type": "FAQPage",
+		"@id": "https://lucidblocks.com/#faq",
+		"url": "https://lucidblocks.com",
+		"about": { "@id": "https://lucidblocks.com/#game" },
+		"mainEntity": [
+			{
+			"@type": "Question",
+			"name": "Are future updates planned?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Yes, future content updates are planned, though they will not be indefinite or regularly scheduled." }
+			},
+			{
+			"@type": "Question",
+			"name": "Is mod support available?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Yes, see the GameBanana page at https://gamebanana.com/games/24404." }
+			},
+			{
+			"@type": "Question",
+			"name": "Does Lucid Blocks have multiplayer?",
+			"acceptedAnswer": { "@type": "Answer", "text": "No, but a multiplayer mod is currently in progress." }
+			},
+			{
+			"@type": "Question",
+			"name": "Are there translations available?",
+			"acceptedAnswer": { "@type": "Answer", "text": "There are no official translations, but fan-created mods exist for Russian and Simplified Chinese." }
+			},
+			{
+			"@type": "Question",
+			"name": "Is controller support available?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Yes, with rebinds available in the settings." }
+			},
+			{
+			"@type": "Question",
+			"name": "What are the minimum specs?",
+			"acceptedAnswer": { "@type": "Answer", "text": "Lucid Blocks does not require a powerful PC, but you need a graphics device that supports Vulkan." }
+			}
 		]
 		}
-		</script>
+	]
+	}
+	</script>
 	</head>
 	<body>
 		<div class="banner">
@@ -50,7 +93,7 @@
 			<a target="_blank" class="icon" href="https://discord.gg/lucidblocks">                   <img alt="Clickable link to the Lucid Blocks Discord server" src="images/icons/discord.svg"/></a>
 			<a target="_blank" class="icon" href="https://www.instagram.com/lucy.b.locks/">                <img alt="Clickable link to the Lucid Blocks Instagram" src="images/icons/instagram.svg"/></a>
 			<a target="_blank" class="icon" href="https://bsky.app/profile/ericalfaro.dev">                 <img alt="Clickable link to the Lucid Blocks Bluesky" src="images/icons/bluesky.svg"/></a>
-			<a target="_blank" class="icon" href="https://www.youtube.com/channel/UC3zEYHyy2tWcg71AzlD-A1g"><img alt="Clickable link to the Lucid Blocks YouTube channel" src="images/icons/youtube.svg"/></a>
+			<a target="_blank" class="icon" href="www.youtube.com/@lucy_b_locks"><img alt="Clickable link to the Lucid Blocks YouTube channel" src="images/icons/youtube.svg"/></a>
 			<a target="_blank" class="icon" href="https://www.reddit.com/r/LucidBlocks/"><img alt="Clickable link to the Lucid Blocks subreddit" src="images/icons/reddit.svg"/></a>
 		</nav>
 
@@ -160,7 +203,7 @@
 					</li>
 				</ul>
 			</section>
-		
+
 
 			<section class="contentSection">
 				<h2>gallery</h2>
@@ -194,7 +237,6 @@
 
 				<img id="fanart-img" class="fanart-image" src="" alt="Lucid Blocks fanart" />
 
-				<p>(message me if you'd like your art on here)</p>
 			</section>
 
 			<section class="contentSection">
@@ -237,4 +279,3 @@
 	</script>
 </html>
 
-  
