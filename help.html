@@ -112,23 +112,7 @@
 			</section>
 			<section class="contentSection" id="recovery">
 				<h2>my qualia was corrupted!</h2>
-
-				<ul>
-					<li>
-						<h4>locating backups</h4>
-						<p>don't panic, the game stores back-ups of the previous ten saves within the <code>%APPDATA%/lucid blocks/backups/</code> folder. each subfolder corresponds to a snapshot of a qualia before you saved it. to find the matching backup, look through the <code>backup_info.txt</code> files inside each subfolder to check the name of the qualia (it'll look a little garbled, but you can find a piece of text like <code>"s:qualia_name","s:[your qualia name]"</code> as shown in the image below with a qualia titled <code>home,home</code>).</p>
-						<img src="images/qualia_name.png" class="articleimg"/>
-					</li>
-					<li>
-						<h4>recovery</h4>
-						<p>before proceeding, copy all <code>%APPDATA%/lucid blocks/</code> contents to a safe locations on your device in case you mess up the recovery process and need to start over.</p>
-
-						<p>assuming you found the correct backup, open the <code>backup_info.txt</code> file to find the UUID of your save file (it should look like a string of random numbers and letters, such as <code>a1a07956-bdd0-41ed-b3de-349e9a9598f</code>).</p>
-
-						<p>next, copy and paste the <code>data.txt</code> and <code>register.txt</code> files into <code>%APPDATA%/lucid blocks/qualia/{the UUID you found}/</code> (or <code>gift_qualia</code> if you downloaded this qualia from the firmament). if you did this correctly, your save file will function properly the next time you start the game.</p>
-					</li>
-
-				</ul>
+				<p>you can restore your qualia in-game. all qualia automatically store a back-up of the original qualia every time the game is saved. click on the rewind/clock button on the qualia you want to recover, then restore any of the back-ups. the back-up will then be added to your list of qualia. </p>
 			</section>
 		</main>
 
