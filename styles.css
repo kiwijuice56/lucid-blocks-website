@@ -44,7 +44,7 @@ section {
 
 #websiteNavigation {
 	display: flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
 }
 
@@ -150,18 +150,23 @@ h3 {
     margin-top: 2.0em;
 }
 
-p, ul {
+p, ul, ol {
     line-height: 1.5em;
     color: rgb(210, 201, 210);
     font-family: 'Courier New', Courier, monospace;
 }
 
-ul {
+ul, ol {
     text-align: left;
 }
 
 a {
     color: rgb(161, 255, 232);
+}
+
+a.current {
+    color: rgb(255, 255, 255);
+    text-decoration:  none;
 }
 
 main, footer {
@@ -187,7 +192,7 @@ main, footer {
 
 .articleimg {
     width: 100%;
-    object-fit: cover; 
+    object-fit: cover;
 }
 
 .gallery img {
@@ -243,4 +248,11 @@ main, footer {
         margin: 0;
         width: 100%;
     }
+}
+
+code {
+    color: rgb(243, 211, 194);
+    background-color: black;
+    padding: 0.2em;
+    border-radius: 0.2em;
 }

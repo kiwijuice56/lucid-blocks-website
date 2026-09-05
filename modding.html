@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<title>lucid blocks help</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="description" content="Lucid Blocks: A psychedelic voxel game about exploring liminal spaces.">
+		<link rel="stylesheet" href="styles.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+
+		<script type="application/ld+json">
+		{
+		"@context": "https://schema.org",
+		"@type": "TechArticle",
+		"headline": "Lucid Blocks Modding Guide",
+		"url": "https://lucidblocks.com/modding.html",
+		"description": "Modding guide for Lucid Blocks covering mod creation and installation.",
+		"about": {
+			"@type": "VideoGame",
+			"@id": "https://lucidblocks.com/#game"
+		},
+		"author": {
+			"@type": "Person",
+			"name": "Lucy B. Locks",
+			"url": "https://lucyblocks.com"
+		},
+		"articleSection": ["Modding"]
+		}
+		</script>
+	</head>
+	<body>
+		<div class="banner">
+			<h1>lucid blocks</h1>
+		</div>
+
+		<section id="intro">
+			<p>a surreal sandbox game about exploring liminal spaces. </p>
+		</section>
+
+		<nav id="social">
+			<a target="_blank" class="icon" href="https://store.steampowered.com/app/3495730/Lucid_Blocks/"><img alt="Clickable link to the Lucid Blocks Steam page" src="images/icons/steam.svg"/></a>
+			<a target="_blank" class="icon" href="https://discord.gg/lucidblocks">                   <img alt="Clickable link to the Lucid Blocks Discord server" src="images/icons/discord.svg"/></a>
+			<a target="_blank" class="icon" href="https://www.instagram.com/lucy.b.locks/">                <img alt="Clickable link to the Lucid Blocks Instagram" src="images/icons/instagram.svg"/></a>
+			<a target="_blank" class="icon" href="https://bsky.app/profile/ericalfaro.dev">                 <img alt="Clickable link to the Lucid Blocks Bluesky" src="images/icons/bluesky.svg"/></a>
+			<a target="_blank" class="icon" href="www.youtube.com/@lucy_b_locks"><img alt="Clickable link to the Lucid Blocks YouTube channel" src="images/icons/youtube.svg"/></a>
+			<a target="_blank" class="icon" href="https://www.reddit.com/r/LucidBlocks/"><img alt="Clickable link to the Lucid Blocks subreddit" src="images/icons/reddit.svg"/></a>
+		</nav>
+
+		<nav id="websiteNavigation">
+			<ul>
+				<li><a href="index.html">home</a></li>
+				<li><a href="help.html">help</a></li>
+				<li><a href="modding.html" class="current">modding</a></li>
+			</ul>
+		</nav>
+
+		<main>
+			<section>
+				<p>jump to a section:</p>
+				<ul>
+					<li><a href="#installing">installing mods</a></li>
+					<li><a href="#developing">developing mods</a></li>
+					<li><a href="#advanced">advanced mods</a></li>
+				</ul>
+
+			</section>
+			<section class="contentSection" id="installing">
+				<h2>installing mods</h2>
+				<ol>
+					<li>
+						<p>download the <code>.pck</code> file (and any <code>.dll</code> files if they exist) for the mod you're interested in. be careful: mods may contain viruses that damage your computer or steal your information. ensure that you trust the developer of the mod before installation.</p>
+					</li>
+					<li>
+						<p>copy the <code>.pck</code> file into the <code>mods/</code> folder located in the lucid blocks installation folder. you will need to create the <code>mode/</code> folder manually if this is your first time installing a mod. for Windows users, the lucid blocks folder is located at <code>C:\Program Files (x86)\Steam\steamapps\common\lucid-blocks\</code></p>
+					</li>
+					<li>test your mod by running the game like usual.</li>
+				</ul>
+			</section>
+			<section class="contentSection" id="developing">
+				<h2>developing mods</h2>
+				<ol>
+					<li>
+						<p>download <a src="https://drive.google.com/drive/folders/1pf1m03b0IyENHQPgofA3onIjzNc6mZTx?usp=sharing">godot 4.6.stable.double</a>, the game engine that lucid blocks was developed in. the godot engine is normally available for download on the Godot website, but the double precision variant must be compiled manually; downloading the linked version saves you from this step.</p>
+					</li>
+					<li>
+						<p>extract the lucid blocks project using <a src="https://github.com/GDRETools/gdsdecomp">GDRETools</a>, a free Godot game decompiler.</p>
+					</li>
+					<li>
+						<p>open the lucid blocks project from the godot editor and make any changes that you wish. keep track of the files that you add or create.</p>
+					</li>
+					<li>
+						<p>once you are ready to share your mod, navigate to <code>Project > Export</code> within Godot, then select <code>Add... > Windows Desktop</code>. in your new preset, go to the <code>Resources</code> tab and switch the export mode to <code>Export all resources in the the project except the resources checked below</code>, then check the root folder to select all files in the project. after all files are selected, manually uncheck only the files that you edited. finally, click <code>Export PCK/ZIP</code> and export your mod as a <code>.pck</code> file. </p>
+					</li>
+					<li>
+						your mod is now ready to share! popular sources include the <a href="https://discord.gg/lucidblocks">lucid blocks discord server</a> or the <a href="https://gamebanana.com/games/24404">GameBanana page</a>.
+					</li>
+				</ol>
+			</section>
+				<section class="contentSection" id="advanced">
+				<h2>advanced mods</h2>
+				<p>most mods can be developed using only GDScript, but more advanced mods may require edits to gdblocks, the custom C++ GDextension that lucid blocks uses to implement the voxel engine. unlike the GDScript code, the C++ code is not easily decompiled. therefore, you will need to compile the <code>.dll</code> file from the open-source repository using the following steps:
+				<ol>
+					<li>
+						<p>clone <a href="https://github.com/kiwijuice56/lucid-blocks-gdblocks">the repository for gdblocks</a>, then move the downloaded contents into the lucid blocks Godot project folder. if done correctly, the <code>SConstruct</code> file should be in the top folder alongside the <code>game/</code> and <code>extension</code> folders.</p>
+					</li>
+					<li>
+						<p>edit the code in <a href="https://code.visualstudio.com/">VSCode</a> (recommended) or your IDE of choice. if adding a custom class (for new biomes, structures, etc.), create a <code>.cpp</code> and <code>.h</code> file within <code>extension/src</code> and <code>extension/include</code> respectively. ensure that you include your custom class in <code>register_types.cpp</code> for it to appear within the godot editor. optionally, follow <a href="https://github.com/kiwijuice56/lucid-blocks-gdblocks#debugger-setup">these steps</a> to configure the VSCode C++ debugger.</p>
+					</li>
+					<li>
+						<p>compile the extension by following the <a href="https://github.com/kiwijuice56/lucid-blocks-gdblocks#debug">debug instructions</a>. this may require installing <a href="https://www.python.org/downloads/">Python</a> and <a href="https://scons.org/">SCons</a>.</p>
+					</li>
+					<li>
+						export your mod like usual, but include the new <code>.dll</code> when sharing your mod. users will need to override the existing <code>.dll</code> file in their lucid blocks installation folder with your own.
+					</li>
+				</ol>
+			</section>
+		</main>
+
+		<img loading="lazy" alt="Moving image of an Ofanim" src="images/tiny_fractal.gif"/>
+
+		<footer>
+			<p>© 2026 Lucy B. Locks | icons by <a href="https://icons8.com/">Icons8</a></p>
+		</footer>
+	</body>
+</html>
