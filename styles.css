@@ -123,7 +123,7 @@ body {
 
 html, body { overflow-x: hidden;}
 
-h1, h2, h3, h4, nav > ul > li > a {
+h1, h2, h3, h4, nav > ul > li > a, #plushieContainer {
     font-family: "Lexend Giga", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -193,6 +193,48 @@ main, footer {
 .articleimg {
     width: 100%;
     object-fit: cover;
+}
+
+#plushimg {
+    padding-top: 1em;
+    filter: blur(1px);
+    opacity: 65%;
+}
+
+#plushieContainer {
+    position: relative;
+}
+
+#spinningBubblebearContainer {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    
+}
+
+#spinningBubblebear {
+    height: 100%;
+    border-radius: 10%; 
+    z-index: 1; 
+}
+
+#youtoozText {
+    font-size: 1.2em;
+    margin-top: 10px;
+    line-height: normal;
+    font-weight: bold;
+    color: white;
+}
+
+.stretchedLink {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 8; 
 }
 
 .gallery img {
